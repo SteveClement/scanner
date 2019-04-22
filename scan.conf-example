@@ -6,7 +6,16 @@ DIR_NEW="new"
 DIR_OLD="old"
 DIR_ARCHIVE="archive"
 
-NMAP_BIN=`which nmap`
+NMAP_BIN=$(which nmap)
+NDIFF_BIN=$(which nmap)
+
+noBin () {
+  echo "nmap and/or ndiff binary not in path or not installed."
+  exit 1
+}
+
+[[ -x $NMAP_BIN ]] && [[ -x $NDIFF_BIN ]] || noBin
+
 NMAP_DEFAULT_OPTIONS="--open -n -T4"
 
 EMAIL_CONTACT_ORG="YOURORG"

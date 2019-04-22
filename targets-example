@@ -1,4 +1,5 @@
-# It is necessary to remove old data of the host/network if the scan type changes!
+# /!\ It is necessary to remove old data of the host/network if the scan type changes!
+#
 # host full scan TCP/UDP
 127.0.0.1/32 a@b.cd -Pn -sU -sS -T4 -p0-65535
 # network quick scan (some TCP ports only)
